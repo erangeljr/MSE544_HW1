@@ -1,0 +1,93 @@
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tablelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:stretchColumns="*">
+    
+    <!-- table row 0 -->
+    <TableRow
+        android:id="@+id/tableRow0"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_span="2"
+            android:text="@string/app_description"/>        
+    </TableRow>
+    <!-- table row 1 -->
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">       
+        <EditText 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:inputType="text"
+            android:text="@string/input_prompt"/>
+        <Button 
+			android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:text="@string/save"/>
+        
+    </TableRow>
+    <!-- table row 2 -->
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">  
+               <EditText 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:inputType="text"
+            android:text="@string/input_prompt"/>
+        <Button 
+			android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:text="@string/OK"/>      
+    </TableRow>
+    <!-- table row 3 -->
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_span="2"
+            android:text="@string/search"/>
+    </TableRow>
+    <!-- table row 4 -->
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+              <EditText 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:inputType="text"
+            android:text="@string/input_prompt"/>
+   
+        
+    </TableRow>
+    <!-- table row 5 -->
+    <TableRow android:id="@+id/tableRow5"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+             <Button 
+			android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_span="2"
+            android:text="@string/enter"/> 
+        
+    </TableRow>
+    
+</TableLayout>

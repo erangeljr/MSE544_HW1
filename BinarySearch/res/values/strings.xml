@@ -1,0 +1,20 @@
+<resources>
+
+    <string name="app_name">Team Bermuda</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Binary Search</string>
+    <string name="plain_label">Plain Label</string>
+    <string name="team_name">Team Bermuda</string>
+    <string name="app_description">A Binary Search Algorithm for Android</string>
+    <string name="enter">Enter</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="OK">OK</string>
+    <string name="invalid_input">Please enter a valid integer</string>
+    <string name="find">Find</string>
+    <string name="search">Search</string>
+    <string name="input_prompt">Input Integer</string>
+    
+
+</resources>
