@@ -25,12 +25,14 @@
         <EditText 
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:id="@+id/addIntegerEditText"
             android:layout_gravity="center_vertical"
-            android:inputType="text"
+            android:inputType="numberDecimal"
             android:text="@string/add_integer"/>
         <Button 
-			android:layout_width="match_parent"
+						android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:id="@+id/addIntegerSaveButton"
             android:layout_gravity="center_vertical"
             android:text="@string/save"/>
         
@@ -71,6 +73,7 @@
               <EditText 
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:id="@+id/searchIntegerEditText"
             android:layout_gravity="center_vertical"
             android:inputType="text"
             android:text="@string/search_integer"/>
@@ -82,8 +85,9 @@
         android:layout_height="wrap_content"
         android:layout_width="wrap_content">
              <Button 
-			android:layout_width="match_parent"
+						android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:id="@+id/searchEnterButton"
             android:layout_gravity="center_vertical"
             android:layout_span="2"
             android:text="@string/enter"/> 

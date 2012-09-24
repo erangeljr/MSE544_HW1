@@ -13,5 +13,11 @@ public class BinarySearch extends Activity{
 			
 		}
 	}
+	
+	public void addInteger(int number)
+	{
+		
+	}
+	
 
 }
