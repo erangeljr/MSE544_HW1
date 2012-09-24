@@ -27,7 +27,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
             android:inputType="text"
-            android:text="@string/input_prompt"/>
+            android:text="@string/add_integer"/>
         <Button 
 			android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -73,7 +73,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
             android:inputType="text"
-            android:text="@string/input_prompt"/>
+            android:text="@string/search_integer"/>
    
         
     </TableRow>
