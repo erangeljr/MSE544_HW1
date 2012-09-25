@@ -71,22 +71,20 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_span="2"
-            android:text="@string/search"/>    
+            android:text="@string/empty_string"/>    
    
         
     </TableRow>
+    
     <!-- table row 5 -->
     <TableRow android:id="@+id/tableRow5"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content">
-          <EditText 
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/searchIntegerEditText"
-            android:layout_gravity="center_vertical"
-            android:inputType="text"
-            android:text="@string/search_integer"/>
-                
+            android:layout_span="2"
+            android:text="@string/search"/>                   
         
     </TableRow>
     
@@ -95,14 +93,35 @@
         android:id="@+id/tableRow6"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content">
+            
+        
+    </TableRow>
+    <!-- table row 7 -->
+    <TableRow 
+        android:id="@+id/tableRow7"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+          <EditText 
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:id="@+id/searchIntegerEditText"
+           android:layout_gravity="center_vertical"
+           android:inputType="text"
+           android:text="@string/search_integer"/>
+        
+    </TableRow>
+    <!-- table row 8 -->
+    <TableRow 
+        android:id="@+id/tableRow8"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
                <Button 
 						android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/searchEnterButton"
             android:layout_gravity="center_vertical"
             android:layout_span="2"
-            android:text="@string/enter"/>        
-        
+            android:text="@string/enter"/>
         
     </TableRow>
     

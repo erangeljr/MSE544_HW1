@@ -18,6 +18,6 @@
     <string name="add_integer">Add Integer to Arrary</string>
     <string name="search_integer">Search for Integer</string>
     <string name="empty_string">	</string>
-    
+    <string name="results">Results</string>
 
 </resources>
