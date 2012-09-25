@@ -34,6 +34,7 @@
             android:layout_height="match_parent"
             android:id="@+id/addIntegerSaveButton"
             android:layout_gravity="center_vertical"
+            android:onClick="addIntegerSaveButtonOnClick"
             android:text="@string/save"/>
         
     </TableRow>
@@ -41,18 +42,13 @@
     <TableRow
         android:id="@+id/tableRow2"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content">  
-               <EditText 
+        android:layout_width="wrap_content">
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center_vertical"
-            android:inputType="text"
-            android:text="@string/input_prompt"/>
-        <Button 
-			android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_vertical"
-            android:text="@string/OK"/>      
+            android:layout_span="3"
+            android:text="@string/empty_string"/>  
+   
     </TableRow>
     <!-- table row 3 -->
     <TableRow
@@ -62,21 +58,20 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_span="2"
-            android:text="@string/search"/>
+            android:layout_span="3"
+            android:text="@string/empty_string"/>    
+        
     </TableRow>
     <!-- table row 4 -->
     <TableRow
         android:id="@+id/tableRow4"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content">
-              <EditText 
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/searchIntegerEditText"
-            android:layout_gravity="center_vertical"
-            android:inputType="text"
-            android:text="@string/search_integer"/>
+            android:layout_span="2"
+            android:text="@string/search"/>    
    
         
     </TableRow>
@@ -84,13 +79,30 @@
     <TableRow android:id="@+id/tableRow5"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content">
-             <Button 
+          <EditText 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/searchIntegerEditText"
+            android:layout_gravity="center_vertical"
+            android:inputType="text"
+            android:text="@string/search_integer"/>
+                
+        
+    </TableRow>
+    
+    <!-- table row 6 -->
+    <TableRow 
+        android:id="@+id/tableRow6"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+               <Button 
 						android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/searchEnterButton"
             android:layout_gravity="center_vertical"
             android:layout_span="2"
-            android:text="@string/enter"/> 
+            android:text="@string/enter"/>        
+        
         
     </TableRow>
     

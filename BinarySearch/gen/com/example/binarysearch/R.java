@@ -24,15 +24,16 @@ public final class R {
     public static final class id {
         public static final int addIntegerEditText=0x7f090003;
         public static final int addIntegerSaveButton=0x7f090004;
-        public static final int menu_settings=0x7f09000b;
-        public static final int searchEnterButton=0x7f09000a;
-        public static final int searchIntegerEditText=0x7f090008;
+        public static final int menu_settings=0x7f09000c;
+        public static final int searchEnterButton=0x7f09000b;
+        public static final int searchIntegerEditText=0x7f090009;
         public static final int tableRow0=0x7f090001;
         public static final int tableRow1=0x7f090002;
         public static final int tableRow2=0x7f090005;
         public static final int tableRow3=0x7f090006;
         public static final int tableRow4=0x7f090007;
-        public static final int tableRow5=0x7f090009;
+        public static final int tableRow5=0x7f090008;
+        public static final int tableRow6=0x7f09000a;
         public static final int tablelayout=0x7f090000;
     }
     public static final class layout {
@@ -47,6 +48,7 @@ public final class R {
         public static final int app_description=0x7f060006;
         public static final int app_name=0x7f060000;
         public static final int cancel=0x7f060008;
+        public static final int empty_string=0x7f060011;
         public static final int enter=0x7f060007;
         public static final int find=0x7f06000c;
         public static final int hello_world=0x7f060001;
