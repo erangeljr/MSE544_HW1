@@ -17,6 +17,34 @@
             android:layout_span="2"
             android:text="@string/app_description"/>        
     </TableRow>
+    
+       <TableRow 
+        
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+           <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_span="3"
+            android:text="@string/empty_string"/>  
+   
+            
+        
+    </TableRow>
+       <TableRow 
+        
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+           <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_span="3"
+            android:text="@string/add"/>  
+   
+            
+        
+    </TableRow>
+    
     <!-- table row 1 -->
     <TableRow
         android:id="@+id/tableRow1"
@@ -59,7 +87,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_span="3"
-            android:text="@string/empty_string"/>    
+            android:text="@string/results"/>    
         
     </TableRow>
     <!-- table row 4 -->
@@ -67,11 +95,15 @@
         android:id="@+id/tableRow4"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content">
-        <TextView
+       <EditText 
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_span="2"
-            android:text="@string/empty_string"/>    
+            android:id="@+id/resultsEditText"
+            android:layout_gravity="center_vertical"
+            android:clickable="false"
+            android:longClickable="false"
+            android:hint="@string/results"
+            android:text="@string/results"/>
    
         
     </TableRow>
@@ -80,11 +112,13 @@
     <TableRow android:id="@+id/tableRow5"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content">
-        <TextView
+           <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_span="2"
-            android:text="@string/search"/>                   
+            android:layout_span="3"
+            android:text="@string/empty_string"/>  
+   
+               
         
     </TableRow>
     
@@ -93,6 +127,12 @@
         android:id="@+id/tableRow6"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content">
+           <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_span="3"
+            android:text="@string/empty_string"/>  
+   
             
         
     </TableRow>
@@ -101,13 +141,12 @@
         android:id="@+id/tableRow7"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content">
-          <EditText 
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:id="@+id/searchIntegerEditText"
-           android:layout_gravity="center_vertical"
-           android:inputType="text"
-           android:text="@string/search_integer"/>
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_span="2"
+            android:text="@string/search"/>    
+
         
     </TableRow>
     <!-- table row 8 -->
@@ -115,14 +154,29 @@
         android:id="@+id/tableRow8"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content">
-               <Button 
+                  <EditText 
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:id="@+id/searchIntegerEditText"
+           android:layout_gravity="center_vertical"
+           android:inputType="numberDecimal"           
+           android:text="@string/search_integer"/>
+
+        
+    </TableRow>
+    
+    <!-- table row 9 -->
+    <TableRow 
+        android:id="@+id/tableRow9"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+                       <Button 
 						android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/searchEnterButton"
             android:layout_gravity="center_vertical"
             android:layout_span="2"
             android:text="@string/enter"/>
-        
     </TableRow>
     
 </TableLayout>

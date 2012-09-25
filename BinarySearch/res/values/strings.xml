@@ -15,9 +15,10 @@
     <string name="find">Find</string>
     <string name="search">Search</string>
     <string name="input_prompt">Input Integer</string>
-    <string name="add_integer">Add Integer to Arrary</string>
+    <string name="add_integer">Add Integer</string>
     <string name="search_integer">Search for Integer</string>
     <string name="empty_string">	</string>
     <string name="results">Results</string>
+    <string name="add">Add</string>
 
 </resources>

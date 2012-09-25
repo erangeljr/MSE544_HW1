@@ -9,9 +9,14 @@ import android.widget.EditText;
 
 public class MainActivity extends Activity {
 
+//	
+//	private static int MAX_VALUE = 10;
 //	private EditText addIntegerEditText;
 //	private EditText searchIntegerEditText;
+//	private EditText resultsEditText;
+	private int searchArray[];
 //	Button addIntegerSaveButton = (Button) findViewById( R.id.addIntegerSaveButton);
+	
 	
 	
     @Override
@@ -23,7 +28,9 @@ public class MainActivity extends Activity {
         
        //addIntegerEditText = (EditText) findViewById(R.id.addIntegerEditText);
        //searchIntegerEditText = (EditText) findViewById(R.id.searchIntegerEditText);
+        //resultsEditText = (EditText) findViewById(R.id.resultsEditText);
         
+                
     }
 
     @Override
@@ -34,6 +41,19 @@ public class MainActivity extends Activity {
     
     public void addIntegerSaveButtonOnClick(View view)
     {
-    	
+    	int number=0;
+    	testInteger(number);
+    }
+    
+    private void addInteger(int number)
+    {
+    	int index=0;
+    	searchArray[index++] = number;
+    }
+    
+    private boolean testInteger(int number)
+    {    	
+    	addInteger(number);
+		return true;
     }
 }
