@@ -56,12 +56,13 @@
             android:id="@+id/addIntegerEditText"
             android:layout_gravity="center_vertical"
             android:inputType="numberDecimal"
+            android:onClick="addIntegerEditTextOnClick"
             android:text="@string/add_integer"/>
         <Button 
 						android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/addIntegerSaveButton"
-            android:layout_gravity="center_vertical"
+            android:layout_gravity="center_vertical"            
             android:onClick="addIntegerSaveButtonOnClick"
             android:text="@string/save"/>
         
