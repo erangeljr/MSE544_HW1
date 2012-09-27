@@ -155,13 +155,21 @@
         android:id="@+id/tableRow8"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content">
-                  <EditText 
+          <EditText 
            android:layout_width="match_parent"
            android:layout_height="match_parent"
            android:id="@+id/searchIntegerEditText"
-           android:layout_gravity="center_vertical"
-           android:inputType="numberDecimal"           
+           android:layout_gravity="center_vertical"           
+           android:inputType="numberDecimal"
+           android:onClick="searchIntegerEditTextOnClick"           
            android:text="@string/search_integer"/>
+           <Button 
+						android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/searchEnterButton"
+            android:onClick="searchEnterButtonOnClick"
+            android:layout_gravity="center_vertical"            
+            android:text="@string/enter"/>
 
         
     </TableRow>
@@ -171,13 +179,7 @@
         android:id="@+id/tableRow9"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content">
-                       <Button 
-						android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/searchEnterButton"
-            android:layout_gravity="center_vertical"
-            android:layout_span="2"
-            android:text="@string/enter"/>
+                       
     </TableRow>
     
 </TableLayout>

@@ -4,21 +4,17 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends Activity {
 
-//	
-//	private static int MAX_VALUE = 10;
+
 	private EditText addIntegerEditText;
-//	private EditText searchIntegerEditText;
-	private EditText resultsEditText;
-//	private int searchArray[];
-//	private int count = 0;
-//	Button addIntegerSaveButton = (Button) findViewById( R.id.addIntegerSaveButton);
+	private EditText searchIntegerEditText;
+	private EditText resultsEditText;	
+
 	
-	
+	BinarySearch binSearch = new BinarySearch(); 
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -28,9 +24,9 @@ public class MainActivity extends Activity {
         
         
        addIntegerEditText = (EditText) findViewById(R.id.addIntegerEditText);
-       //searchIntegerEditText = (EditText) findViewById(R.id.searchIntegerEditText);
+       searchIntegerEditText = (EditText) findViewById(R.id.searchIntegerEditText);
        resultsEditText = (EditText) findViewById(R.id.resultsEditText);
-        
+       
                 
     }
 
@@ -47,21 +43,46 @@ public class MainActivity extends Activity {
     
     public void addIntegerSaveButtonOnClick(View view)
     {
-//    	int number=0;
-//    	testInteger(number);
-    	resultsEditText.setText("Click Received");
+    	try
+    	{
+    		int number = Integer.parseInt(addIntegerEditText.getText().toString());
+    		
+    		if(binSearch.testInteger(number))
+    		{    			
+    			binSearch.addInteger(number);
+    			resultsEditText.setText("Test Successful");
+    		}        		
+        	else
+        		resultsEditText.setText("Test Unsuccessful");;
+    	}
+    	catch(NumberFormatException e)
+    	{
+    		resultsEditText.setText("Enter a valid Integer!");
+    	}    	 	    	
+    	    	
     }
     
-    private void addInteger(int number)
+    public void searchIntegerEditTextOnClick(View view)
     {
-//    	count++;
-//    	int index=0;
-//    	searchArray[index++] = number;
+    	searchIntegerEditText.setText("");
     }
     
-    private boolean testInteger(int number)
-    {    	
-    	addInteger(number);
-		return true;
-    }
+    public void searchEnterButtonOnClick(View view)
+    {
+    	try
+    	{
+    		int number = Integer.parseInt(searchIntegerEditText.getText().toString());
+    		if(binSearch.search(number))
+    			resultsEditText.setText("Search Found");
+    		else
+    			resultsEditText.setText("Search Not Found");
+    	}
+    	catch(NumberFormatException e)
+    	{
+    		resultsEditText.setText("Enter a valid Integer!");
+    	}
+    	
+    	resultsEditText.setText("Search Click Received");
+    }    
+    
 }
