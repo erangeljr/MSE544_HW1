@@ -72,10 +72,8 @@ public class MainActivity extends Activity {
     	try
     	{
     		int number = Integer.parseInt(searchIntegerEditText.getText().toString());
-    		if(binSearch.search(number))
-    			resultsEditText.setText("Search Found");
-    		else
-    			resultsEditText.setText("Search Not Found");
+    		resultsEditText.setText("Received: " + number);
+
     	}
     	catch(NumberFormatException e)
     	{
