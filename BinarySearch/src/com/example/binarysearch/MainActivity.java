@@ -80,7 +80,7 @@ public class MainActivity extends Activity {
     		resultsEditText.setText("Enter a valid Integer!");
     	}
     	
-    	resultsEditText.setText("Search Click Received");
+    	
     }    
     
 }
