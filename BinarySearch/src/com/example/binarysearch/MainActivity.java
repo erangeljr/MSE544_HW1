@@ -45,16 +45,22 @@ public class MainActivity extends Activity {
     {
     	try
     	{
-    		int number = Integer.parseInt(addIntegerEditText.getText().toString());
-    		
-    		binSearch.addInteger(number);
-			resultsEditText.setText("Added Successful: " + number);    		
+    		int number = Integer.parseInt(addIntegerEditText.getText().toString()),
+    			result =0;
+    		result = binSearch.testInteger(number);
+    		if(result == -1)
+    			resultsEditText.setText("Cannot Add anymore!");
+    		if(result == -2)
+    			resultsEditText.setText("Duplicate: " + number);
+    		if(result == 0)	
+    			resultsEditText.setText("Added Successful: " + number);    		
     
     	}
     	catch(NumberFormatException e)
     	{
     		resultsEditText.setText("Enter a valid Integer!");
-    	}    	 	    	
+    	}    	 	    
+    	addIntegerEditText.setText("");
     	    	
     }
     
@@ -90,7 +96,10 @@ public class MainActivity extends Activity {
     
     public void showButtonOnClick(View view)
     {
-    	resultsEditText.setText("showEnterOnClick");
+    	String  results;
+    	results = binSearch.showArray().toString();
+    	
+    	resultsEditText.setText("Show: ");
     }
     
 }

@@ -2,17 +2,22 @@ package com.example.binarysearch;
 
 import java.util.Arrays;
 
+
 import android.app.Activity;
 
 public class BinarySearch extends Activity{
 	
-	private Boolean found = false;	
 	private int index = 0;
 	private static final int MAX_COUNT = 12;
 	private static final int MIN_COUNT = 8;
 	private int[] searchArray = new int[MAX_COUNT];
+	private boolean ADDED_SUCCESFULLY = false;
 	
-	
+	//default constructor
+	BinarySearch()
+	{
+		
+	}
 	//should pass in search key, left, and right
 	//Add more comments
 	public int search(int[] sortedArray,int key)
@@ -22,11 +27,9 @@ public class BinarySearch extends Activity{
 		boolean exists = false;
 		int mid = 0,		
 			last = sortedArray.length -1,
-			first = MAX_COUNT - index,
-			counter = 0;
+			first = MAX_COUNT - index;				
 		
-		
-		while(counter <= MAX_COUNT)
+		while(first <= last && !exists)
 		{
 			
 			mid = (first + last)/2;
@@ -41,7 +44,7 @@ public class BinarySearch extends Activity{
 				else
 					first = mid + 1;
 			}			
-			counter++;				
+			
 		}
 		
 		if(!exists)
@@ -50,7 +53,8 @@ public class BinarySearch extends Activity{
 		return mid;
 	}
 	
-	//Add more comments
+	//Performs a check on the size of the array
+	// The sorts the array
 	public int preSearch(int number)
 	{
 		int result = 0;
@@ -70,16 +74,41 @@ public class BinarySearch extends Activity{
 		
 	}
 	
-	//Add more comments	
+	//Tests size then
+	//Inserts an Integer into the array	
 	public void addInteger(int number)
 	{
+	
+		searchArray[index++] = number;				
+
+	}	
+					
+	
+	public int testInteger(int number)
+	{
+		int testResult = 0;
+		boolean duplicate = false;
 		
 		if(index < MAX_COUNT )
 		{
-			searchArray[index++] = number;				
+			if(preSearch(number) > 0 )
+			;
+			if(duplicate == false)
+				addInteger(number);				
 
-		}						
-				
+		}	
+		else
+		{
+			testResult = -1;
+		}
+		if(duplicate == true)
+			testResult = -2;
+		return testResult;
+	}
+	
+	public int[] showArray()
+	{
+		return searchArray; 
 	}
 	
 
