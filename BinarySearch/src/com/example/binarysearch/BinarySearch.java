@@ -23,12 +23,13 @@ public class BinarySearch extends Activity{
 		boolean exists = false;
 		int mid = 0,		
 			last = sortedArray.length -1,
-			first = MAX_COUNT - index;
+			first = MAX_COUNT - index,
+			counter = 0;
 		
 		
-		
-		while(!exists)
+		while(first < last)
 		{
+			
 			mid = (first + last)/2;
 			if(sortedArray[mid] == key)
 			{
@@ -43,16 +44,32 @@ public class BinarySearch extends Activity{
 				else
 					first = mid + 1;
 			}			
+			counter++;
+				
 		}
 		
+		if(!exists)
+			mid = -2;
 		
 		return mid;
 	}
 	
 	public int preSearch(int number)
-	{		
-		Arrays.sort(searchArray);		
-		return search(searchArray, number);
+	{
+		int result = 0;
+		if(index < MIN_COUNT)
+		{
+			result = -1;			
+		}
+		else
+		{
+			Arrays.sort(searchArray);
+			result = search(searchArray, number);
+		}
+		
+			
+				
+		return result;
 		
 	}
 	

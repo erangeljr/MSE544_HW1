@@ -71,7 +71,12 @@ public class MainActivity extends Activity {
     			location = 0;
     		
     		location = binSearch.preSearch(number);
-    		resultsEditText.setText("Location: " + location);
+    		if(location == -1)
+    			resultsEditText.setText("Enter more Integers!");
+    		if(location == -2)
+    			resultsEditText.setText("Integer not Found!"); 
+    		else     			
+    			resultsEditText.setText("Location: " + location);
     		
 
     	}
