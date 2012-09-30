@@ -11,11 +11,10 @@ public class BinarySearch extends Activity{
 	private static final int MAX_COUNT = 12;
 	private static final int MIN_COUNT = 8;
 	private int[] searchArray = new int[MAX_COUNT];
-
-//	earchArray = { 0, 3, 1, 7, 2, 8, 12, 53, 64, 95, 6, 71};
 	
 	
 	//should pass in search key, left, and right
+	//Add more comments
 	public int search(int[] sortedArray,int key)
 	{
 		//found = false;
@@ -27,7 +26,7 @@ public class BinarySearch extends Activity{
 			counter = 0;
 		
 		
-		while(first < last)
+		while(counter <= MAX_COUNT)
 		{
 			
 			mid = (first + last)/2;
@@ -37,15 +36,12 @@ public class BinarySearch extends Activity{
 			}
 			else
 			{
-
-
 				if(sortedArray[mid] > key)
 					last = mid -1;
 				else
 					first = mid + 1;
 			}			
-			counter++;
-				
+			counter++;				
 		}
 		
 		if(!exists)
@@ -54,6 +50,7 @@ public class BinarySearch extends Activity{
 		return mid;
 	}
 	
+	//Add more comments
 	public int preSearch(int number)
 	{
 		int result = 0;
@@ -73,6 +70,7 @@ public class BinarySearch extends Activity{
 		
 	}
 	
+	//Add more comments	
 	public void addInteger(int number)
 	{
 		
@@ -83,26 +81,6 @@ public class BinarySearch extends Activity{
 		}						
 				
 	}
-	
-	//not done
-//	public int[] show()
-//	{
-//				
-//		return searchArray;
-//	}
-
-//	public boolean testInteger(int number)
-//	{
-//		found = false;
-//		if(index > MIN_COUNT || index < MAX_COUNT )
-//		{			
-//			addInteger(number);
-//			found = true;
-//		}
-//			
-//		return found;
-//	}
-//	
 	
 
 }
