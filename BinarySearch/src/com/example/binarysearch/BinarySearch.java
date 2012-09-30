@@ -1,5 +1,7 @@
 package com.example.binarysearch;
 
+import java.util.Arrays;
+
 import android.app.Activity;
 
 public class BinarySearch extends Activity{
@@ -10,68 +12,80 @@ public class BinarySearch extends Activity{
 	private static final int MIN_COUNT = 8;
 	private int[] searchArray = new int[MAX_COUNT];
 
-	//searchArray = { 0, 3, 1, 7, 2, 8, 12, 53, 64, 95, 6, 71};
+//	earchArray = { 0, 3, 1, 7, 2, 8, 12, 53, 64, 95, 6, 71};
 	
 	
 	//should pass in search key, left, and right
-
-	public int search(int[] sortedArray,int key, int first,int last)
+	public int search(int[] sortedArray,int key)
 	{
-		int mid = 0;
-		found = false;
-		last = sortedArray.length - 1;
-		first = 0;
+		//found = false;
 		
-		mid = (first + last)/2;
+		boolean exists = false;
+		int mid = 0,		
+			last = sortedArray.length -1,
+			first = MAX_COUNT - index;
 		
-		while(!found)
+		
+		
+		while(!exists)
 		{
+			mid = (first + last)/2;
 			if(sortedArray[mid] == key)
 			{
-				found = true;
+				exists = true;
 			}
 			else
 			{
+
+
 				if(sortedArray[mid] > key)
-					last = mid - 1; 
+					last = mid -1;
 				else
 					first = mid + 1;
 			}			
 		}
 		
 		
-		
-		
-		
-
 		return mid;
+	}
+	
+	public int preSearch(int number)
+	{		
+		Arrays.sort(searchArray);		
+		return search(searchArray, number);
+		
 	}
 	
 	public void addInteger(int number)
 	{
-		try
+		
+		if(index < MAX_COUNT )
 		{
-			searchArray[index++] = number;	
-		}
-		catch(Exception e)
-		{
-			
-		}
+			searchArray[index++] = number;				
+
+		}						
 				
 	}
-
-	public boolean testInteger(int number)
-	{
-		found = false;
-		if(index > MIN_COUNT || index < MAX_COUNT )
-		{			
-			addInteger(number);
-			found = true;
-		}
-			
-		return found;
-	}
 	
+	//not done
+//	public int[] show()
+//	{
+//				
+//		return searchArray;
+//	}
+
+//	public boolean testInteger(int number)
+//	{
+//		found = false;
+//		if(index > MIN_COUNT || index < MAX_COUNT )
+//		{			
+//			addInteger(number);
+//			found = true;
+//		}
+//			
+//		return found;
+//	}
+//	
 	
 
 }

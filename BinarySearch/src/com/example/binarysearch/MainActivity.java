@@ -47,13 +47,9 @@ public class MainActivity extends Activity {
     	{
     		int number = Integer.parseInt(addIntegerEditText.getText().toString());
     		
-    		if(binSearch.testInteger(number))
-    		{    			
-    			binSearch.addInteger(number);
-    			resultsEditText.setText("Test Successful");
-    		}        		
-        	else
-        		resultsEditText.setText("Test Unsuccessful");;
+    		binSearch.addInteger(number);
+			resultsEditText.setText("Added Successful: " + number);    		
+    
     	}
     	catch(NumberFormatException e)
     	{
@@ -71,8 +67,12 @@ public class MainActivity extends Activity {
     {
     	try
     	{
-    		int number = Integer.parseInt(searchIntegerEditText.getText().toString());
-    		resultsEditText.setText("Received: " + number);
+    		int number = Integer.parseInt(searchIntegerEditText.getText().toString()),
+    			location = 0;
+    		
+    		location = binSearch.preSearch(number);
+    		resultsEditText.setText("Location: " + location);
+    		
 
     	}
     	catch(NumberFormatException e)
@@ -82,5 +82,10 @@ public class MainActivity extends Activity {
     	
     	
     }    
+    
+    public void showButtonOnClick(View view)
+    {
+    	resultsEditText.setText("showEnterOnClick");
+    }
     
 }

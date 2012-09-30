@@ -20,5 +20,6 @@
     <string name="empty_string">	</string>
     <string name="results">Results</string>
     <string name="add">Add</string>
+    <string name="show">Show</string>
 
 </resources>
