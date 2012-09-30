@@ -75,7 +75,7 @@ public class MainActivity extends Activity {
     			resultsEditText.setText("Enter more Integers!");
     		if(location == -2)
     			resultsEditText.setText("Integer not Found!"); 
-    		else     			
+    		if(location > 0)     			
     			resultsEditText.setText("Location: " + location);
     		
 
