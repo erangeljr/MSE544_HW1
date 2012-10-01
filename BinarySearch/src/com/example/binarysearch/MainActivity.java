@@ -41,6 +41,9 @@ public class MainActivity extends Activity {
     	addIntegerEditText.setText("");
     }
     
+    //Tests input for a valid integer
+    //based on the return results from testInteger
+    //will display results from method test
     public void addIntegerSaveButtonOnClick(View view)
     {
     	try
@@ -69,6 +72,10 @@ public class MainActivity extends Activity {
     	searchIntegerEditText.setText("");
     }
     
+    //OnClick event for Search
+    //Tests to ensure a valid integer is being passed
+    //Depending on the Return from the preSearch will 
+    //display results if successfully found    
     public void searchEnterButtonOnClick(View view)
     {
     	try
@@ -94,6 +101,7 @@ public class MainActivity extends Activity {
     	
     }    
     
+    //Currently not implemented
     public void showButtonOnClick(View view)
     {
     	String  results;

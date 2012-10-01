@@ -18,8 +18,10 @@ public class BinarySearch extends Activity{
 	{
 		
 	}
-	//should pass in search key, left, and right
-	//Add more comments
+	//Pass in a Sorted Array and test key
+	//Defines variables used in binary search
+	//If found returns index of array else
+	//returns -2
 	public int search(int[] sortedArray,int key)
 	{
 		//found = false;
@@ -54,7 +56,8 @@ public class BinarySearch extends Activity{
 	}
 	
 	//Performs a check on the size of the array
-	// The sorts the array
+	// Then sorts the array
+	//Passes the sorted array to the Search method
 	public int preSearch(int number)
 	{
 		int result = 0;
@@ -83,7 +86,10 @@ public class BinarySearch extends Activity{
 
 	}	
 					
-	
+	//Tests integer
+	//Tests to ensure that number being added
+	//can be placed in array
+	//Also checks for duplicates
 	public int testInteger(int number)
 	{
 		int testResult = 0;
@@ -92,7 +98,7 @@ public class BinarySearch extends Activity{
 		if(index < MAX_COUNT )
 		{
 			if(preSearch(number) > 0 )
-			;
+				duplicate = true;
 			if(duplicate == false)
 				addInteger(number);				
 
