@@ -44,6 +44,7 @@ public class MainActivity extends Activity {
     //Tests input for a valid integer
     //based on the return results from testInteger
     //will display results from method test
+    //Input must be between 1 - 100
     public void addIntegerSaveButtonOnClick(View view)
     {
     	try
