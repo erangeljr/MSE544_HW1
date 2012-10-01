@@ -51,9 +51,9 @@ public class MainActivity extends Activity {
     	{
     		int number = Integer.parseInt(addIntegerEditText.getText().toString()),
     			result =0;
-    		if(number <= 1 || number > 100)
+    		if(number < 1 || number > 100)
     		{
-    			resultsEditText.setText("Enter an Integer between 1 - 100");
+    			resultsEditText.setText("Enter a valid Integer!");
     		}
     		else
     		{
@@ -122,8 +122,8 @@ public class MainActivity extends Activity {
     //Currently not implemented
     public void showButtonOnClick(View view)
     {
-    	String  results;
-    	results = binSearch.showArray().toString();
+//    	String  results;
+//    	results = binSearch.showArray().toString();
     	
     	resultsEditText.setText("Show: ");
     }

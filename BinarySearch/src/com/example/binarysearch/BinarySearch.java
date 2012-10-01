@@ -112,9 +112,13 @@ public class BinarySearch extends Activity{
 		return testResult;
 	}
 	
-	public int[] showArray()
+	public int showArray()
 	{
-		return searchArray; 
+		
+//		Arrays.sort(searchArray);
+//		string[] result = Arrays.toString(searchArray); 
+		return -1;
+		
 	}
 	
 
