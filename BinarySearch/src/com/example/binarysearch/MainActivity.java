@@ -50,13 +50,22 @@ public class MainActivity extends Activity {
     	{
     		int number = Integer.parseInt(addIntegerEditText.getText().toString()),
     			result =0;
-    		result = binSearch.testInteger(number);
-    		if(result == -1)
-    			resultsEditText.setText("Cannot Add anymore!");
-    		if(result == -2)
-    			resultsEditText.setText("Duplicate: " + number);
-    		if(result == 0)	
-    			resultsEditText.setText("Added Successful: " + number);    		
+    		if(number <= 1 || number >= 100)
+    		{
+    			resultsEditText.setText("Enter an Integer between 1 - 100");
+    		}
+    		else
+    		{
+    			result = binSearch.testInteger(number);
+        		if(result == -1)
+        			resultsEditText.setText("Cannot Add anymore!");
+        		if(result == -2)
+        			resultsEditText.setText("Duplicate: " + number);
+        		if(result == 0)	
+        			resultsEditText.setText("Added Successful: " + number);
+    			
+    		}
+    		    		
     
     	}
     	catch(NumberFormatException e)
