@@ -93,12 +93,15 @@ public class MainActivity extends Activity {
     		int number = Integer.parseInt(searchIntegerEditText.getText().toString()),
     			location = 0;
     		
+    		//If user enter '0'
+    		//then exit the application
     		if(number == 0)
     			finish();
     		
+    		//Get the returned integer from PreSearch
     		location = binSearch.preSearch(number);
     		
-    		
+    		//Test for message 
     		if(location == -1)
     			resultsEditText.setText("Enter more Integers!");
     		if(location == -2)
