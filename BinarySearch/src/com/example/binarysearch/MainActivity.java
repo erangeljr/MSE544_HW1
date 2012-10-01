@@ -51,7 +51,7 @@ public class MainActivity extends Activity {
     	{
     		int number = Integer.parseInt(addIntegerEditText.getText().toString()),
     			result =0;
-    		if(number <= 1 || number >= 100)
+    		if(number <= 1 || number > 100)
     		{
     			resultsEditText.setText("Enter an Integer between 1 - 100");
     		}
@@ -93,7 +93,12 @@ public class MainActivity extends Activity {
     		int number = Integer.parseInt(searchIntegerEditText.getText().toString()),
     			location = 0;
     		
+    		if(number == 0)
+    			finish();
+    		
     		location = binSearch.preSearch(number);
+    		
+    		
     		if(location == -1)
     			resultsEditText.setText("Enter more Integers!");
     		if(location == -2)

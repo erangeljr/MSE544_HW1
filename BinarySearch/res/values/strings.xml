@@ -22,5 +22,6 @@
     <string name="add">Add</string>
     <string name="show">Show</string>
     <string name="sort">Sort</string>
+    <string name="zeroToExit">Enter "0" to Exit</string>
     
 </resources>

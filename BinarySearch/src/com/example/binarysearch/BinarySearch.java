@@ -11,7 +11,7 @@ public class BinarySearch extends Activity{
 	private static final int MAX_COUNT = 12;
 	private static final int MIN_COUNT = 8;
 	private int[] searchArray = new int[MAX_COUNT];
-	private boolean ADDED_SUCCESFULLY = false;
+	//private boolean ADDED_SUCCESFULLY = false;
 	
 	//default constructor
 	BinarySearch()

@@ -70,6 +70,7 @@ public final class R {
         public static final int sort=0x7f060015;
         public static final int team_name=0x7f060005;
         public static final int title_activity_main=0x7f060003;
+        public static final int zeroToExit=0x7f060016;
     }
     public static final class style {
         public static final int AppTheme=0x7f070000;
