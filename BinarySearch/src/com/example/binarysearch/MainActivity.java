@@ -122,10 +122,10 @@ public class MainActivity extends Activity {
     //Currently not implemented
     public void showButtonOnClick(View view)
     {
-//    	String  results;
-//    	results = binSearch.showArray().toString();
+    
+    	String results = binSearch.showArray().toString();
     	
-    	resultsEditText.setText("Show: ");
+    	resultsEditText.setText("Show: " + results);
     }
     
 }
