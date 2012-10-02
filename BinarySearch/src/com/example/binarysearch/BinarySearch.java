@@ -2,7 +2,6 @@ package com.example.binarysearch;
 
 import java.util.Arrays;
 
-
 import android.app.Activity;
 
 public class BinarySearch extends Activity{
@@ -20,8 +19,8 @@ public class BinarySearch extends Activity{
 	}
 	//Pass in a Sorted Array and test key
 	//Defines variables used in binary search
-	//If found returns index of array else
-	//returns -2
+	//If found returns index of array 
+	//If not found returns -2
 	public int search(int[] sortedArray,int key)
 	{
 		//found = false;
@@ -97,7 +96,7 @@ public class BinarySearch extends Activity{
 		
 		if(index < MAX_COUNT -1 )
 		{
-			if(preSearch(number) > 0 )
+			if(preSearch(number) >= 0 )
 				duplicate = true;
 			if(duplicate == false)
 				addInteger(number);				
@@ -112,12 +111,14 @@ public class BinarySearch extends Activity{
 		return testResult;
 	}
 	
-	public int showArray()
+	public String showArray()
 	{
+		StringBuilder stringBuilder = new StringBuilder();
 		
-//		Arrays.sort(searchArray);
-//		string[] result = Arrays.toString(searchArray); 
-		return -1;
+		for(int i =0; i< index; i++)
+    		stringBuilder.append(searchArray[i]);
+					
+		return stringBuilder.toString();
 		
 	}
 	
