@@ -62,15 +62,13 @@ public class BinarySearch extends Activity{
 		int result = 0;
 		if(index < MIN_COUNT)
 		{
-			result = -1;			
+			return result = -1;			
 		}
 		else
 		{
 			Arrays.sort(searchArray);
 			result = search(searchArray, number);
-		}
-		
-			
+		}			
 				
 		return result;
 		
@@ -94,20 +92,32 @@ public class BinarySearch extends Activity{
 		int testResult = 0;
 		boolean duplicate = false;
 		
+		//Checks for maximum input
 		if(index < MAX_COUNT -1 )
 		{
-			if(preSearch(number) >= 0 )
-				duplicate = true;
-			if(duplicate == false)
-				addInteger(number);				
-
+			//Checking for duplicates
+			for(int i = 0; i < index; i++)
+			{
+				if(searchArray[i] == number)
+					duplicate = true;
+			}
+			if(duplicate == true)
+			{
+				//Returns Error for
+				//Duplicates
+				testResult = -2;
+			}			
+			else
+				searchArray[index++] = number;
+				
 		}	
 		else
 		{
+			//Returns Error for Array overload
 			testResult = -1;
 		}
-		if(duplicate == true)
-			testResult = -2;
+
+		
 		return testResult;
 	}
 	

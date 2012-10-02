@@ -106,7 +106,7 @@ public class MainActivity extends Activity {
     			resultsEditText.setText("Enter more Integers!");
     		if(location == -2)
     			resultsEditText.setText(number + " Not Found!"); 
-    		if(location > 0)     			
+    		if(location >= 0)     			
     			resultsEditText.setText("Number: " + number + ", At Location: " + location);
     		
 
@@ -116,7 +116,7 @@ public class MainActivity extends Activity {
     		resultsEditText.setText("Enter a valid Integer!");
     	}
     	
-    	
+    	searchIntegerEditText.setText("");
     }    
     
     //Currently not implemented
