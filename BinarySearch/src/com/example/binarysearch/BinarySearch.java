@@ -95,7 +95,7 @@ public class BinarySearch extends Activity{
 		int testResult = 0;
 		boolean duplicate = false;
 		
-		if(index < MAX_COUNT )
+		if(index < MAX_COUNT -1 )
 		{
 			if(preSearch(number) > 0 )
 				duplicate = true;

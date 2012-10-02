@@ -63,7 +63,7 @@ public class MainActivity extends Activity {
         		if(result == -2)
         			resultsEditText.setText("Duplicate: " + number);
         		if(result == 0)	
-        			resultsEditText.setText("Added Successful: " + number);
+        			resultsEditText.setText("Added: " + number);
     			
     		}
     		    		
@@ -105,9 +105,9 @@ public class MainActivity extends Activity {
     		if(location == -1)
     			resultsEditText.setText("Enter more Integers!");
     		if(location == -2)
-    			resultsEditText.setText("Integer not Found!"); 
+    			resultsEditText.setText(number + " Not Found!"); 
     		if(location > 0)     			
-    			resultsEditText.setText("Location: " + location);
+    			resultsEditText.setText("Number: " + number + ", At Location: " + location);
     		
 
     	}
