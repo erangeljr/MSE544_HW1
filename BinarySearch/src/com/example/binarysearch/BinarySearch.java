@@ -10,7 +10,7 @@ public class BinarySearch extends Activity{
 	private static final int MAX_COUNT = 12;
 	private static final int MIN_COUNT = 8;
 	private int[] searchArray = new int[MAX_COUNT];
-	//private boolean ADDED_SUCCESFULLY = false;
+	private boolean IsSorted = false;
 	
 	//default constructor
 	BinarySearch()
@@ -27,8 +27,8 @@ public class BinarySearch extends Activity{
 		
 		boolean exists = false;
 		int mid = 0,		
-			last = sortedArray.length -1,
-			first = MAX_COUNT - index;				
+			last = index - 1,
+			first = 0;				
 		
 		while(first <= last && !exists)
 		{
@@ -41,7 +41,7 @@ public class BinarySearch extends Activity{
 			else
 			{
 				if(sortedArray[mid] > key)
-					last = mid -1;
+					last = mid - 1;
 				else
 					first = mid + 1;
 			}			
@@ -57,16 +57,20 @@ public class BinarySearch extends Activity{
 	//Performs a check on the size of the array
 	// Then sorts the array
 	//Passes the sorted array to the Search method
+	//Tests if a Sort has occurred.
 	public int preSearch(int number)
 	{
 		int result = 0;
+		
+		if(IsSorted == false)
+			return -3; 
+		
 		if(index < MIN_COUNT)
 		{
-			return result = -1;			
+			result = -1;			
 		}
 		else
-		{
-			Arrays.sort(searchArray);
+		{			
 			result = search(searchArray, number);
 		}			
 				
@@ -130,6 +134,33 @@ public class BinarySearch extends Activity{
 					
 		return stringBuilder.toString();
 		
+	}
+	
+	//Performs a bubble sort
+	public int[] SortArray(int[] sort)
+	{
+		int temp = 0;
+		for(int i = 0; i < index; i++)
+		{
+			for(int j = 1; j < index; j++)
+			{
+			
+				if(sort[j -1] > sort[j])
+				{
+					temp = sort[j -1];
+					sort[j - 1] = sort[j];
+					sort[j] = temp;
+				}				
+			}
+		}
+		IsSorted = true;
+		return sort;
+	}
+	
+	//Helper for Sort
+	public void preSort()
+	{
+		searchArray = SortArray(searchArray);		
 	}
 	
 

@@ -106,8 +106,10 @@ public class MainActivity extends Activity {
     			resultsEditText.setText("Enter more Integers!");
     		if(location == -2)
     			resultsEditText.setText(number + " Not Found!"); 
+    		if(location == -3)
+    			resultsEditText.setText("You must sort your Array!");
     		if(location >= 0)     			
-    			resultsEditText.setText("Number: " + number + ", At Location: " + location);
+    			resultsEditText.setText("Found: " + number + ", Index: " + location);
     		
 
     	}
@@ -127,5 +129,13 @@ public class MainActivity extends Activity {
     	
     	resultsEditText.setText("Show: " + results);
     }
+    
+    public void sortButtonOnClick(View view)
+    {
+    	binSearch.preSort();
+    	String results = binSearch.showArray().toString();    	
+    	resultsEditText.setText("Show: " + results);
+    }
+    
     
 }

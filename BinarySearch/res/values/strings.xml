@@ -23,5 +23,6 @@
     <string name="show">Show</string>
     <string name="sort">Sort</string>
     <string name="zeroToExit">Enter "0" to Exit</string>
+    <string name="key_search">Key to Search</string>
     
 </resources>

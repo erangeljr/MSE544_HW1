@@ -84,8 +84,7 @@
         android:layout_width="wrap_content">
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_span="3"
+            android:layout_height="match_parent"            
             android:text="@string/results"/>    
         
     </TableRow>
@@ -103,7 +102,15 @@
             android:longClickable="false"
             android:hint="@string/results"
             android:text="@string/empty_string"/>
-          <Button 
+
+        
+    </TableRow>
+    
+    <!-- table row 5 -->
+    <TableRow android:id="@+id/tableRow5"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">                     
+				<Button 
 						android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/showButton"
@@ -111,17 +118,14 @@
             android:layout_span="1"
             android:layout_gravity="center_vertical"            
             android:text="@string/show"/>
-        
-    </TableRow>
-    
-    <!-- table row 5 -->
-    <TableRow android:id="@+id/tableRow5"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content">
-                      
-               
-   
-               
+               <Button 
+						android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/sortButton"
+            android:onClick="sortButtonOnClick"
+            android:layout_span="1"
+            android:layout_gravity="center_vertical"            
+            android:text="@string/sort"/>
         
     </TableRow>
     
@@ -139,6 +143,21 @@
             
         
     </TableRow>
+    
+    <!-- Another no existent table row -->
+     <TableRow        
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+           <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_span="3"
+            android:text="@string/empty_string"/>  
+   
+            
+        
+    </TableRow>
+    
     <!-- table row 7 -->
     <TableRow 
         android:id="@+id/tableRow7"
@@ -148,7 +167,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_span="2"
-            android:text="@string/search"/>    
+            android:text="@string/key_search"/>    
 
         
     </TableRow>
@@ -181,12 +200,25 @@
         android:id="@+id/tableRow9"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content">
-               <TextView
+                <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_span="3"
+            android:text="@string/empty_string"/>  
+ 
+    </TableRow>
+    <!-- table row 10 -->
+     <TableRow 
+        android:id="@+id/tableRow10"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+                         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_span="2"
             android:text="@string/zeroToExit"/>   
                        
+            
+                       
     </TableRow>
-    
 </TableLayout>
