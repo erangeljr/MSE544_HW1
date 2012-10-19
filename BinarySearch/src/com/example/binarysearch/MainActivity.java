@@ -51,33 +51,29 @@ public class MainActivity extends Activity {
     	{
     		
     		
-    		String list = searchIntegerEditText.getText().toString();
-    		int 	number = 0;
-    		int[] numbers ={};
-    		for(int i = 0; i < list.length(); i++)
-    		{    			
-    				numbers[i] = list.charAt(i);
-    		}
-    			
+    		String list =  addIntegerEditText.getText().toString();    		
+    		String[] tokens = list.split(",");
+    		    		
+    		int c = 0;
+    		int number = 0;
+  			int result =0;
+    		for(String t : tokens)    
+    		{
+    			  number = Integer.parseInt(t);
     		
-    		
-    		//int number = Integer.parseInt(addIntegerEditText.getText().toString()),
-    			int result =0;
-			for(int i =0; i < numbers.length; i++)
-			{
-				if(numbers[i] < 1 || numbers[i] > 100)
+    			if(number < 1 || number> 100)
 	    		{
 	    			resultsEditText.setText("Enter a valid Integer!");
 	    		}
 	    		else
 	    		{
-	    			result = binSearch.testInteger(numbers[i]);
+	    			result = binSearch.testInteger(number);
 	        		if(result == -1)
 	        			resultsEditText.setText("Cannot Add anymore!");
 	        		if(result == -2)
-	        			resultsEditText.setText("Duplicate: " + numbers[i]);
+	        			resultsEditText.setText("Duplicate: " + number);
 	        		if(result == 0)	
-	        			resultsEditText.setText("Added: " + numbers[i]);
+	        			resultsEditText.setText("Added Integers");
 	    			
 	    		}
 	    		    		
@@ -88,7 +84,7 @@ public class MainActivity extends Activity {
     	}
     	catch(NumberFormatException e)
     	{
-    		resultsEditText.setText("Enter a valid Integer!");
+    		resultsEditText.setText("Invalid!");
     	}    	 	    
     	addIntegerEditText.setText("");
     	    	
