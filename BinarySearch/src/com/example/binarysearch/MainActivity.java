@@ -49,24 +49,41 @@ public class MainActivity extends Activity {
     {
     	try
     	{
-    		int number = Integer.parseInt(addIntegerEditText.getText().toString()),
-    			result =0;
-    		if(number < 1 || number > 100)
-    		{
-    			resultsEditText.setText("Enter a valid Integer!");
+    		
+    		
+    		String list = searchIntegerEditText.getText().toString();
+    		int 	number = 0;
+    		int[] numbers ={};
+    		for(int i = 0; i < list.length(); i++)
+    		{    			
+    				numbers[i] = list.charAt(i);
     		}
-    		else
-    		{
-    			result = binSearch.testInteger(number);
-        		if(result == -1)
-        			resultsEditText.setText("Cannot Add anymore!");
-        		if(result == -2)
-        			resultsEditText.setText("Duplicate: " + number);
-        		if(result == 0)	
-        			resultsEditText.setText("Added: " + number);
     			
-    		}
-    		    		
+    		
+    		
+    		//int number = Integer.parseInt(addIntegerEditText.getText().toString()),
+    			int result =0;
+			for(int i =0; i < numbers.length; i++)
+			{
+				if(numbers[i] < 1 || numbers[i] > 100)
+	    		{
+	    			resultsEditText.setText("Enter a valid Integer!");
+	    		}
+	    		else
+	    		{
+	    			result = binSearch.testInteger(numbers[i]);
+	        		if(result == -1)
+	        			resultsEditText.setText("Cannot Add anymore!");
+	        		if(result == -2)
+	        			resultsEditText.setText("Duplicate: " + numbers[i]);
+	        		if(result == 0)	
+	        			resultsEditText.setText("Added: " + numbers[i]);
+	    			
+	    		}
+	    		    		
+				
+			}
+    		
     
     	}
     	catch(NumberFormatException e)
@@ -91,8 +108,9 @@ public class MainActivity extends Activity {
     	try
     	{
     		int number = Integer.parseInt(searchIntegerEditText.getText().toString()),
-    			location = 0;
-    		
+    				location = 0;
+    		    		  
+    	
     		//If user enter '0'
     		//then exit the application
     		if(number == 0)
