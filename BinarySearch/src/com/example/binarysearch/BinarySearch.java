@@ -1,6 +1,5 @@
 package com.example.binarysearch;
 
-import java.util.Arrays;
 
 import android.app.Activity;
 
@@ -82,7 +81,8 @@ public class BinarySearch extends Activity{
 	//Inserts an Integer into the array	
 	public void addInteger(int number)
 	{
-	
+		if(IsSorted == true)
+			IsSorted = false;
 		searchArray[index++] = number;				
 
 	}	
@@ -112,7 +112,7 @@ public class BinarySearch extends Activity{
 				testResult = -2;
 			}			
 			else
-				searchArray[index++] = number;
+				addInteger(number);
 				
 		}	
 		else
