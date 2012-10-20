@@ -129,8 +129,14 @@ public class BinarySearch extends Activity{
 	{
 		StringBuilder stringBuilder = new StringBuilder();
 		
+		stringBuilder.append("[");
 		for(int i =0; i< index; i++)
-    		stringBuilder.append(searchArray[i]);
+		{
+			stringBuilder.append(searchArray[i]);
+			if(i != index-1) 
+    			stringBuilder.append(",");
+		}
+			stringBuilder.append("]");
 					
 		return stringBuilder.toString();
 		
